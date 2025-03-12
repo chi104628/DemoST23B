@@ -1,0 +1,17 @@
+{
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^4.21.2",
+    "nodemon": "^3.1.9"
+  },
+  "name": "demost23b",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "prestart": "for /f \"tokens=5\" %a in ('netstat -ano ^| findstr :4000') do @taskkill /PID %a /F 2>nul & exit",
+    "start": "nodemon index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
