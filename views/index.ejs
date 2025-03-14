@@ -10,7 +10,25 @@
     
 </head>
 <body>
-    <h1>Hello EJS</h1>
-    
+    <nav>
+        <ul>
+            <li><a href="/">🏠 Trang chủ</a></li>
+            <li><a href="/shop">🛍 Sản phẩm</a></li>
+            <li><a href="/add-product">➕ Thêm sản phẩm</a></li>
+        </ul>
+    </nav>
+
+    <h1 class="title">🛒 Danh sách sản phẩm</h1>
+
+    <div class="product-container">
+        <% products.forEach(product => { %>
+            <div class="product-card">
+                <img src="<%= product.image %>" alt="<%= product.name %>">
+                <h3><%= product.name %></h3>
+                <p><strong>Giá:</strong> <%= product.price %> VNĐ</p>
+                <button>Mua ngay</button>
+            </div>
+        <% }); %>
+    </div>
 </body>
 </html>
